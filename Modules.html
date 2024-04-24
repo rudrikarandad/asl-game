@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+	<head>
+		<meta charset="UTF-8">
+		<title>Modules</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="modules.css">
+	</head>
+	<body>
+		<div id="main">
+			<button class="openbtn" onclick="openNav()">&#9776;</button>
+		</div> 
+		<h1> Select one to begin learning!</h1>
+		<div id="mySidebar" class="sidebar">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="Guide.html">Guide</a>
+			<a href="Modules.html">Modules</a>
+			<a href="SignFS.html">Finger-<br>spelling</a>
+		</div>
+		<br>
+		<button class="container" onclick="phraseMod()">Daily Phrases</button>
+		<button class="container" onclick="adjMod()">Adjectives</button>
+		<button class="container" onclick="grammarMod()">Grammar</button>
+		<br>
+		<br>
+		<br>
+		
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+
+	</body>
+	<script>
+		function phraseMod() {
+			location.replace('PhraseMod.html');
+		}
+		function adjMod() {
+			location.replace('AdjMod.html');
+		}
+		function grammarMod() {
+			location.replace('GrammarMod.html');
+		}
+		function openNav() {
+			document.getElementById("mySidebar").style.width = "250px";
+			document.getElementById("main").style.marginLeft = "250px";
+		}
+		function closeNav() {
+			document.getElementById("mySidebar").style.width = "0";
+			document.getElementById("main").style.marginLeft = "0";
+		}
+	</script>
+</html>

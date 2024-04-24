@@ -1,0 +1,107 @@
+body{  
+	background-color: #A9DFBF;
+	background-size:1200px;	
+	color: white;
+	font-family: "Trebuchet MS", sans-serif;
+	text-align: center;
+}
+
+#header{
+	top: 5px;
+	left: 450px;
+	position: absolute;
+	text-align: center;
+	font-size:60px;
+}
+
+#enter {
+	border-radius: 5px;
+	border: none;
+	background-color: white;
+	color: black;
+}
+
+#again {
+	border-radius: 5px;
+	border: none;
+	background-color: white;
+	color: black;
+}
+
+.sign{
+	height: 600px;
+	width: 500px;
+	border: 3px solid white;
+	left: 130px;
+	top: 370px;
+	position: absolute;
+}
+
+.sign img{
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+.descr{
+	height: 600x;
+	width: 630px;
+	border: 3px solid white;
+	padding: 20px;
+	left: 700px;
+	top: 370px;
+	position: absolute;
+	font-family: "Trebuchet MS", sans-serif;
+	font-size: 21px;
+	text-align: center;
+}
+
+.sidebar {
+	height: 100%; 
+	width: 0; 
+	position: fixed; 
+	z-index: 1; 
+	top: 0;
+	left: 0;
+	background-color: black; 
+	overflow-x: hidden; 
+	padding-top: 60px; 
+	transition: 1s; 
+	font-size:19px;
+	text-align: left;
+}
+
+.sidebar a {
+	padding: 8px 8px 8px 32px;
+	text-decoration: none;
+	font-size: 25px;
+	color: white;
+	display: block;
+	transition: 1s;
+}
+
+.sidebar .closebtn {
+	position: absolute;
+	top: 0;
+	right: 25px;
+	font-size: 36px;
+	margin-left: 50px;
+}
+
+.openbtn {
+	font-size: 20px;
+	cursor: pointer;
+	background-color: #111;
+	color: white;
+	padding: 10px 15px;
+	border: none;
+	text-align: left;
+}
+
+#main {
+	transition: margin-left 1s; 
+	padding: 20px;
+	width:30px;
+	position: relative;
+	text-align: left;
+}

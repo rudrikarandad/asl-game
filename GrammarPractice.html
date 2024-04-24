@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>Sign</title>
+		<script src="modules.js"></script>
+		<link rel="stylesheet" href="grammarpractice.css">
+	</head>
+	
+	<body>
+		<div id="main">
+			<button class="openbtn" onclick="openNav()">&#9776;</button>
+		</div> 
+	    <h1>Grammar Practice</h1> 
+		<!sidebar: https://www.w3schools.com/howto/howto_js_collapse_sidebar.asp>
+		<div id="mySidebar" class="sidebar">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="Guide.html">Guide</a>
+			<a href="Modules.html">Modules</a>
+			<a href="SignFS.html">Finger-<br>spelling</a>
+		</div>
+		
+	    <h2 id=name >Question 1</h2>
+	
+		<p id=result></p>
+		<p id=fin></p>
+		
+		<img src="placeholder" id="question"> 
+		<br><br><br>
+		<input type="text" id="userAnswer" placeholder="Type your answer...">
+		<button id="answer" onclick="check(grammar)">Guess</button>
+		
+		<button id="next" onclick="next()">Next</button>
+		
+		<p id=torf></p>
+		<p id=sofar></p>
+	</body>
+	<script type="text/javascript">
+		randomize(gimgs, grammar);
+		function next(){
+			randomize(gimgs, grammar);
+			questionCount++;
+			/*How to change the heading w/ .innerText: 
+			https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText*/
+			document.getElementById("name").innerText = "Question "+questionCount;
+			if(questionCount==grammar.length){
+				document.getElementById("name").innerText = "YOU FINISHED!";
+				document.getElementById("torf").innerHTML = "";
+				document.getElementById("question").src = "";
+				document.getElementById("fin").innerHTML = "You got a score of: "+
+					correctCount+"/"+questionCount+"<br>Press 'Next' to go back to the flashcards";
+			}
+			if(questionCount>grammar.length){
+				document.getElementById("next").onclick = location.replace('GrammarMod.html');
+			}
+		}
+	</script>
+</html>
